@@ -1,0 +1,5 @@
+Implementasi sebuah sistem SOA atau Web Service secara sederahana dengan 2 pilhan (A atau B)
+A.	1 side server dan minimal 3 side client 
+B.	Minimal 3 side server dan 1 side client 
+
+Keempat side tersebut harus dibuat dalam bahasa pemrograman yang berbeda dan basis data yang berbeda
