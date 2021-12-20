@@ -34,8 +34,13 @@ This language will be used in both client and server side.
 - client side will provide client UI.
 - server side will provide service aggregation. All services has to be connected to this one to avoid CORS.
 
+## Python
+Required Plugins:
+- Flask
+
+browse to /Python and run "python app.py" application will start in port 5000 by default
+
 ### Other language candidates
-- Python
 - PHP
 - Java
 
