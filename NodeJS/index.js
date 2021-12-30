@@ -1,12 +1,12 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-
+var port = 3100
 const fs = require('fs');
 
-http.listen(8888, function(){
+http.listen(port, function(){
 	console.log('===================');
-	console.log('listening on: 8888');
+	console.log('listening on: '+port);
 	console.log('-------------------');
 	console.log(' ');
 });

@@ -11,4 +11,4 @@ def get_countries():
     return jsonify(countryList)
 
 if __name__ == '__main__':
-  app.run()
+  app.run(port=3200)
