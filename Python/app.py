@@ -14,7 +14,16 @@ def get_userList():
   result = userList
 
   if 'gender' in args:
-    result = [user for user in userList if user.get('gender').lower() == args['gender'].lower()]
+    if args['gender'] != "":
+      result = [user for user in result if user.get('gender').lower() == args['gender'].lower()]
+
+  if 'firstname' in args:
+    if args['firstname'] != "":
+      result = [user for user in result if args['firstname'].lower() in user.get('first_name').lower()]
+  
+  if 'lastname' in args:
+    if args['lastname'] != "":
+      result = [user for user in result if args['lastname'].lower() in user.get('last_name').lower()]
   
   print(result)
   return jsonify(result)
