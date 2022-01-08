@@ -6,6 +6,8 @@ const fs = require('fs');
 var path = require("path");
 const axios = require('axios');
 
+const ws_python = 'http://localhost:3200/';
+
 http.listen(port, function(){
 	console.log('===================');
 	console.log('listening on: '+port);
@@ -27,22 +29,15 @@ app.get('/api/countrylist', function(req, res){
   res.send(JSON.parse(jsonList))
 })
 
-//local data. to be depecrated.
-app.get('/api/userlist', function(req, res){
-  let filePath = path.join(__dirname, 'userList.json')
-  let jsonList = fs.readFileSync(filePath);
-  res.send(JSON.parse(jsonList))
-})
-
 //get data from python api instead.
 app.get('/api/user/list', function(req, res){
-  axios.get('http://localhost:3200/getuserlist')
+  axios.get(ws_python+'/getuserlist', { params: req.query })
     .then( response => {
       data = response.data
       res.send(data)
     })
     .catch(function (error) {
       console.log(error);
-      res.send(error)
+      res.send(error);
     })
 })
