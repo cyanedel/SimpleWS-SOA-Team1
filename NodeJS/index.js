@@ -3,6 +3,7 @@ var app = express();
 var http = require('http').Server(app);
 var port = 3100
 const fs = require('fs');
+var path = require("path");
 
 http.listen(port, function(){
 	console.log('===================');
@@ -19,6 +20,17 @@ app.get('/ping', function(req, res){
 });
 
 app.get('/api/countrylist', function(req, res){
-  let countryList = fs.readFileSync('countryList.json');
-  res.send(JSON.parse(countryList))
+  let filePath = path.join(__dirname, 'countryList.json')
+  let jsonList = fs.readFileSync(filePath);
+  res.send(JSON.parse(jsonList))
+})
+
+app.get('/api/userlist', function(req, res){
+  let filePath = path.join(__dirname, 'userList.json')
+  let jsonList = fs.readFileSync(filePath);
+  res.send(JSON.parse(jsonList))
+})
+
+app.get('/api/user/list', function(req, res){
+  res.send({status: "we're working on it."})
 })
