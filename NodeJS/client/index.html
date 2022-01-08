@@ -14,7 +14,8 @@
           let params = {
             gender: $('input[name="radio-gender"]:checked').val() || "",
             firstname: $('.input-first-name').val() || "",
-            lastname: $('.input-last-name').val() || ""
+            lastname: $('.input-last-name').val() || "",
+            occupation: $('.input-occupation').val() || "",
           }
 
           getCustomerList(params)
@@ -22,7 +23,8 @@
 
         $('.btn-filter-clear').click( () => {
           $('input[name="radio-gender"]').prop('checked', false);
-          $('.input-first-name, .input-last-name').val("");
+          $('.input-first-name, .input-last-name, .input-occupation').val("");
+          getCustomerList();
         })
       })
 
@@ -36,16 +38,23 @@
         $('.js-table-customer-list tbody').html("");
         if(userList.length > 0){
           $.each(userList, (index, user) => {
-            var $tableRow = $("<tr><td></td><td></td><td></td><td></td></tr>");
+            var $tableRow = $('<tr>'
+              +'<td class="uid"></td>'
+              +'<td class="fullname"></td>'
+              +'<td class="occupation"></td>'
+              +'<td class="gender"></td>'
+              +'<td class="email"></td>'
+              +'</tr>');
             $tableRow
-              .find("td:eq(0)").text(user["id"]).end()
-              .find("td:eq(1)").text(user["first_name"] +" "+ user["last_name"]).end()
-              .find("td:eq(2)").text(user["email"]).end()
-              .find("td:eq(3)").text(user["gender"]).end()
+              .find(".uid").text(user["id"]).end()
+              .find(".fullname").text(user["first_name"] +" "+ user["last_name"]).end()
+              .find(".email").text(user["email"]).end()
+              .find(".occupation").text(user["occupation"]).end()
+              .find(".gender").text(user["gender"]).end()
             $('.js-table-customer-list tbody').append($tableRow)
           })
         } else {
-          $('.js-table-customer-list tbody').append($("<tr><td class='fst-italic text-center' colspan='4'>- no data -</td></tr>"))
+          $('.js-table-customer-list tbody').append($("<tr><td class='fst-italic text-center' colspan='5'>- no data -</td></tr>"))
         }
       }
     </script>
@@ -75,14 +84,20 @@
     <div class="container my-3 px-3">
       <h4>Filter</h4>
       <hr />
-      <div class="row"><div class="col">
+      <div class="row my-2"><div class="col">
         <div class="input-group">
           <span class="input-group-text">First and last name</span>
           <input type="text" class="input-first-name" aria-label="First name" class="form-control">
           <input type="text" class="input-last-name" aria-label="Last name" class="form-control">
         </div>
       </div></div>
-      <div class="row pt-2"><div class="col">
+      <div class="row my-2"><div class="col">
+        <div class="input-group">
+          <span class="input-group-text">Occupation</span>
+          <input type="text" class="input-occupation" aria-label="Occupation" class="form-control">
+        </div>
+      </div></div>
+      <div class="row my-2"><div class="col">
         <label>Gender: </label>
         <div class="form-check form-check-inline">
           <input type="radio" class="form-check-input" name="radio-gender" id="rdo-gender-male" value="male">
@@ -97,7 +112,8 @@
           </label>
         </div>
       </div></div>
-      <div class="pt-3 text-end">
+      <hr />
+      <div class="text-center">
         <button type="button" class="btn btn-warning btn-filter-clear">Clear</button>
         <button type="button" class="btn btn-success btn-filter-apply">Apply</button>
       </div>
@@ -110,8 +126,9 @@
         <tr class="table-dark">
           <th>uid</th>
           <th>Customer Name</th>
-          <th>E-mail</th>
+          <th>Occupation</th>
           <th>Gender</th>
+          <th>E-mail</th>
         </tr>
       </thead>
       <tbody></tbody>
