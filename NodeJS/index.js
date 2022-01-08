@@ -15,8 +15,8 @@ http.listen(port, function(){
 	console.log(' ');
 });
 
-app.use(express.static(__dirname + '/client/src'));
-app.get('/', function(req, res){ res.sendFile(__dirname + '/client/index.html'); });
+app.use(express.static(__dirname + '/client'));
+app.get('/', function(req, res){ res.sendFile(__dirname + '/index.html'); });
 
 app.get('/ping', function(req, res){
 	res.send({status: "ok", statusCode: "200"});
