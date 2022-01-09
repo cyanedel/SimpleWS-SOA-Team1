@@ -1,0 +1,47 @@
+<script>
+  $(function(){
+    getMovieList();
+  })
+
+  function getMovieList(params){
+    $.get("api/movie/list", params).done(response => {
+      populateTableList(response)
+    })
+  }
+
+  function populateTableList(list){
+    $('.js-table-movie-list tbody').html("");
+    if(list.length > 0){
+      $.each(list, (index, item) => {
+        var $tableRow = $('<tr>'
+          +'<td class="uid"></td>'
+          +'<td class="title"></td>'
+          +'<td class="genre"></td>'
+          +'<td class="year"></td>'
+          +'</tr>');
+        $tableRow
+          .find(".uid").text(item["Id"]).end()
+          .find(".title").text(item["Title"]).end()
+          .find(".genre").text(item["Genre"]).end()
+          .find(".year").text(item["Year"]).end()
+        $('.js-table-movie-list tbody').append($tableRow)
+      })
+    } else {
+      $('.js-table-movie-list tbody').append($("<tr><td class='fst-italic text-center' colspan='5'>- no data -</td></tr>"))
+    }
+  }
+</script>
+<div class="container my-3">
+  <div class="row"><div class="col"><h4>Movie List</h4></div></div>
+  <table class="js-table-movie-list table table-striped">
+    <thead>
+    <tr class="table-dark">
+      <th>uid</th>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Release Year</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+  </table>
+</div>

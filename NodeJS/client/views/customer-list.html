@@ -26,10 +26,10 @@
     })
   }
 
-  function populateTableCustomerList(userList){
+  function populateTableCustomerList(list){
     $('.js-table-customer-list tbody').html("");
-    if(userList.length > 0){
-      $.each(userList, (index, user) => {
+    if(list.length > 0){
+      $.each(list, (index, item) => {
         var $tableRow = $('<tr>'
           +'<td class="uid"></td>'
           +'<td class="fullname"></td>'
@@ -38,11 +38,11 @@
           +'<td class="email"></td>'
           +'</tr>');
         $tableRow
-          .find(".uid").text(user["id"]).end()
-          .find(".fullname").text(user["first_name"] +" "+ user["last_name"]).end()
-          .find(".email").text(user["email"]).end()
-          .find(".occupation").text(user["occupation"]).end()
-          .find(".gender").text(user["gender"]).end()
+          .find(".uid").text(item["id"]).end()
+          .find(".fullname").text(item["first_name"] +" "+ item["last_name"]).end()
+          .find(".email").text(item["email"]).end()
+          .find(".occupation").text(item["occupation"]).end()
+          .find(".gender").text(item["gender"]).end()
         $('.js-table-customer-list tbody').append($tableRow)
       })
     } else {
