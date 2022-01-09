@@ -1,0 +1,108 @@
+<script>
+  var listCache;
+  $(function(){
+    getList();
+
+    $('.select-customer').on('change', function(){
+      if (this.value != "0"){
+        $.get("api/user/list", {id: this.value}).done((response)=>{
+          data = response[0]
+          $('.details-customer').html(JSON.stringify(data, undefined, 2))
+        })
+      }
+    })
+
+    $('.select-movie').on('change', function(){
+      if (this.value != "0"){
+        $.get("api/movie/list", {id: this.value}).done((response)=>{
+          data = response[0]
+          $('.details-movie').html(JSON.stringify(data, undefined, 2))
+        })
+      }
+    })
+
+    $('.select-animal').on('change', function(){
+      if (this.value != "0"){
+        $.get("api/php/list", {id: this.value}).done((response)=>{
+          data = response[0]
+          $('.details-animal').html(JSON.stringify(data, undefined, 2))
+        })
+      }
+    })
+  })
+
+  function getList(params){
+    $.when($.get("api/user/list"),$.get("api/movie/list"),$.get("api/php/list")).then(function(res1, res2, res3){
+      debugger;
+      populateSelectCustomer(res1[0]);
+      populateSelectMovie(res2[0]);
+      populateSelectAnimal(res3[0]);
+    })
+  }
+
+  function populateSelectCustomer(list){
+    let $selectDOM = $('.select-customer')
+    if(list.length > 0){
+      let $firstOpt = $selectDOM.find('option:eq(0)').clone()
+      $selectDOM.html("").append($firstOpt)
+      $.each(list, (index, item) => {
+        $selectDOM.append('<option value="'+item["id"]+'">'+item["firstname"]+' '+item["lastname"]+'</option>')
+      })
+    }
+  }
+
+  function populateSelectMovie(list){
+    let $selectDOM = $('.select-movie')
+    if(list.length > 0){
+      let $firstOpt = $selectDOM.find('option:eq(0)').clone()
+      $selectDOM.html("").append($firstOpt)
+      $.each(list, (index, item) => {
+        $selectDOM.append('<option value="'+item["Id"]+'">'+item["Title"]+'</option>')
+      })
+    }
+  }
+
+  function populateSelectAnimal(list){
+    let $selectDOM = $('.select-animal')
+    debugger;
+    if(list.length > 0){
+      let $firstOpt = $selectDOM.find('option:eq(0)').clone()
+      $selectDOM.html("").append($firstOpt)
+      $.each(list, (index, item) => {
+        $selectDOM.append('<option value="'+item["id"]+'">'+item["displayname"]+'</option>')
+      })
+    }
+  }
+</script>
+<div class="container my-5">
+  <div class="row"><div class="col"><h4>Combined Data Selector</h4></div></div>
+  <div class="row mt-3">
+    <div class="col-12 col-lg-4">
+      <select class="form-select form-select-lg select-customer mb-3">
+        <option value="0" selected>Select Customer</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <pre class="details-customer"></pre>
+    </div>
+    <div class="col-12 col-lg-4">
+      <select class="form-select form-select-lg select-movie mb-3">
+        <option value="0" selected>Select Movie</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <pre class="details-movie"></pre>
+    </div>
+    <div class="col-12 col-lg-4">
+      <select class="form-select form-select-lg select-animal mb-3">
+        <option value="0" selected>Select Animal</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <pre class="details-animal"></pre>
+    </div>
+  </div>
+</div>

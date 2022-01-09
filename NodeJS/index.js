@@ -59,11 +59,17 @@ app.get('/api/movie/list', function(req, res){
 
 //php
 app.get('/api/php/list', function(req, res){
-  console.log("requested")
-  axios.get(ws_php+'/animal-list', { params: req.query })
+  const params = req.query;
+  
+  //workaround solution since PHP does not support param in JSON format.
+  let apiLink = ws_php+'animal-list';
+  if (params.id){
+    apiLink = ws_php+'animal-list?id='+params.id
+  }
+
+  axios.get(apiLink)
     .then( response => {
       data = response.data
-      console.log(data)
       res.send(data)
     })
     .catch(function (error) {

@@ -44,6 +44,10 @@ def get_userListDB():
   if 'occupation' in args:
     if args['occupation'] != "":
       select_query += " AND LOWER(occupation) = '" + args['occupation'].lower() +"'"
+  
+  if 'id' in args:
+    if args['id'] != "":
+      select_query += " AND id = '" + args['id'] +"'"
 
   print(select_query)
   res = db_query(select_query)

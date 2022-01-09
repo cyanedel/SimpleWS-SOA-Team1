@@ -2,11 +2,12 @@ package main
 
 import (
 	"context"
-	"time"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
-	"encoding/json"
+	"strconv"
+	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -31,6 +32,10 @@ func handleRequests() {
 }
 
 func main() {
+	handleRequests()
+}
+
+func getmovielist(idStr string){
 	client, err := mongo.NewClient(options.Client().ApplyURI(uri))
 	if err != nil {
 		log.Fatal(err)
@@ -41,20 +46,31 @@ func main() {
 		log.Fatal(err)
 	}
 	defer client.Disconnect(ctx)
-
+	
 	collection := client.Database("soa").Collection("movielist")
-	cur, currErr := collection.Find(ctx, bson.D{})
+	
+	// this part is not efficient. but it works anyway
+	if idStr != "" {
+		id, err := strconv.ParseInt(idStr, 10, 64)
 
-	if currErr != nil { panic(currErr) }
-	defer cur.Close(ctx)
-
-	if err = cur.All(ctx, &movielist); err != nil {
-		panic(err)
+		cur, currErr := collection.Find(ctx, bson.D{{"id", id}})
+		if currErr != nil { panic(currErr) }
+		defer cur.Close(ctx)
+	
+		movielist = nil
+		if err = cur.All(ctx, &movielist); err != nil {
+			panic(err)
+		}
+	} else {
+		cur, currErr := collection.Find(ctx, bson.D{})
+		if currErr != nil { panic(currErr) }
+		defer cur.Close(ctx)
+	
+		movielist = nil
+		if err = cur.All(ctx, &movielist); err != nil {
+			panic(err)
+		}
 	}
-
-	// fmt.Println(movielist)
-
-	handleRequests()
 }
 
 func homePage(w http.ResponseWriter, r *http.Request){
@@ -62,5 +78,14 @@ func homePage(w http.ResponseWriter, r *http.Request){
 }
 
 func returnMovieList(w http.ResponseWriter, r *http.Request){
+	keys, ok := r.URL.Query()["id"]
+    
+	if ok {
+		key := keys[0]
+		getmovielist(key)
+	} else {
+		getmovielist("")
+	}
+
 	json.NewEncoder(w).Encode(movielist)
 }

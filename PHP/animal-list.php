@@ -1,10 +1,19 @@
 <?php
 header("Content-Type:application/json;charset=utf-8");
-fetchData();
-function fetchData(){
+if(isset($_GET["id"])){
+  fetchData($_GET["id"]);
+} else {
+  fetchData("");
+}
+
+function fetchData($id){
   require 'dblink.properties.php';
   $myArray = array();
-  $sql = "select * from animals";
+  $sql = "SELECT * FROM animals WHERE 1=1 ";
+  if($id != ""){
+    $sql .= " AND id=".$id;
+  }
+  
   $result = mysqli_query($dblink, $sql) or die("Error in Selecting " . mysqli_error($dblink));
   while($row = mysqli_fetch_assoc($result)){
     $myArray[] = $row;
