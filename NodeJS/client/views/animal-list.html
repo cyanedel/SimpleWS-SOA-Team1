@@ -1,0 +1,47 @@
+<script>
+  var listCache;
+  $(function(){
+    getList();
+  })
+
+  function getList(params){
+    $.get("api/php/list", params).done(response => {
+      listCache = response
+      console.log(listCache)
+      populateTableList(listCache)
+    })
+  }
+
+  function populateTableList(list){
+    $('.js-table-item-list tbody').html("");
+    if(list.length > 0){
+      $.each(list, (index, item) => {
+        var $tableRow = $('<tr>'
+          +'<td class="uid"></td>'
+          +'<td class="name"></td>'
+          +'<td class="sname"></td>'
+          +'</tr>');
+        $tableRow
+          .find(".uid").text(item["id"]).end()
+          .find(".name").text(item["displayname"]).end()
+          .find(".sname").text(item["scientificname"]).end()
+        $('.js-table-item-list tbody').append($tableRow)
+      })
+    } else {
+      $('.js-table-item-list tbody').append($("<tr><td class='fst-italic text-center' colspan='5'>- no data -</td></tr>"))
+    }
+  }
+</script>
+<div class="container my-3">
+  <div class="row"><div class="col"><h4>Name List</h4></div></div>
+  <table class="js-table-item-list table table-striped">
+    <thead>
+    <tr class="table-dark">
+      <th>uid</th>
+      <th>Name</th>
+      <th>Scientific Name</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+  </table>
+</div>

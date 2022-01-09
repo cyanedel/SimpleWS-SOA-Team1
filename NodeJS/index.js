@@ -59,9 +59,11 @@ app.get('/api/movie/list', function(req, res){
 
 //php
 app.get('/api/php/list', function(req, res){
-  axios.get(ws_php+'/test', { params: req.query })
+  console.log("requested")
+  axios.get(ws_php+'/animal-list', { params: req.query })
     .then( response => {
       data = response.data
+      console.log(data)
       res.send(data)
     })
     .catch(function (error) {

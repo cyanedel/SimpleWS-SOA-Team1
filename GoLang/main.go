@@ -52,13 +52,13 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(movielist)
+	// fmt.Println(movielist)
 
 	handleRequests()
 }
 
 func homePage(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "Welcome go(lang) HomePage!")
+	fmt.Fprintf(w, "Welcome to go(lang) HomePage!")
 }
 
 func returnMovieList(w http.ResponseWriter, r *http.Request){
