@@ -1,0 +1,55 @@
+create table animals (
+	id INT,
+	displayname VARCHAR(50),
+	scientificname VARCHAR(50)
+);
+insert into animals (id, displayname, scientificname) values (1, 'Bird, red-billed tropic', 'Phaethon aethereus');
+insert into animals (id, displayname, scientificname) values (2, 'Shrike, common boubou', 'Laniarius ferrugineus');
+insert into animals (id, displayname, scientificname) values (3, 'Slender-billed cockatoo', 'Cacatua tenuirostris');
+insert into animals (id, displayname, scientificname) values (4, 'Pale white-eye', 'Zosterops pallidus');
+insert into animals (id, displayname, scientificname) values (5, 'Waxbill, blue', 'Uraeginthus angolensis');
+insert into animals (id, displayname, scientificname) values (6, 'Tiger', 'Panthera tigris');
+insert into animals (id, displayname, scientificname) values (7, 'Asian foreset tortoise', 'Manouria emys');
+insert into animals (id, displayname, scientificname) values (8, 'Black-tailed prairie dog', 'Cynomys ludovicianus');
+insert into animals (id, displayname, scientificname) values (9, 'Brazilian otter', 'Pteronura brasiliensis');
+insert into animals (id, displayname, scientificname) values (10, 'Arctic tern', 'Sterna paradisaea');
+insert into animals (id, displayname, scientificname) values (11, 'Seal, southern elephant', 'Mirounga leonina');
+insert into animals (id, displayname, scientificname) values (12, 'Civet, small-toothed palm', 'Arctogalidia trivirgata');
+insert into animals (id, displayname, scientificname) values (13, 'Malay squirrel (unidentified)', 'unavailable');
+insert into animals (id, displayname, scientificname) values (14, 'Macaque, pig-tailed', 'Macaca nemestrina');
+insert into animals (id, displayname, scientificname) values (15, 'Kalahari scrub robin', 'Certotrichas paena');
+insert into animals (id, displayname, scientificname) values (16, 'Eastern grey kangaroo', 'Macropus giganteus');
+insert into animals (id, displayname, scientificname) values (17, 'Chital', 'Axis axis');
+insert into animals (id, displayname, scientificname) values (18, 'Turtle, eastern box', 'Terrapene carolina');
+insert into animals (id, displayname, scientificname) values (19, 'Brolga crane', 'Grus rubicundus');
+insert into animals (id, displayname, scientificname) values (20, 'Black spider monkey', 'Ateles paniscus');
+insert into animals (id, displayname, scientificname) values (21, 'Eurasian hoopoe', 'Upupa epops');
+insert into animals (id, displayname, scientificname) values (22, 'Adouri (unidentified)', 'unavailable');
+insert into animals (id, displayname, scientificname) values (23, 'Toddy cat', 'Paradoxurus hermaphroditus');
+insert into animals (id, displayname, scientificname) values (24, 'Rhinoceros, black', 'Diceros bicornis');
+insert into animals (id, displayname, scientificname) values (25, 'Komodo dragon', 'Varanus komodensis');
+insert into animals (id, displayname, scientificname) values (26, 'Monkey, black spider', 'Ateles paniscus');
+insert into animals (id, displayname, scientificname) values (27, 'Prairie falcon', 'Falco mexicanus');
+insert into animals (id, displayname, scientificname) values (28, 'Eagle, bald', 'Haliaeetus leucocephalus');
+insert into animals (id, displayname, scientificname) values (29, 'Tortoise, radiated', 'Geochelone radiata');
+insert into animals (id, displayname, scientificname) values (30, 'South American puma', 'Felis concolor');
+insert into animals (id, displayname, scientificname) values (31, 'Bird, bare-faced go away', 'Lorythaixoides concolor');
+insert into animals (id, displayname, scientificname) values (32, 'Western grey kangaroo', 'Macropus fuliginosus');
+insert into animals (id, displayname, scientificname) values (33, 'Cardinal, red-capped', 'Paroaria gularis');
+insert into animals (id, displayname, scientificname) values (34, 'Turkey, wild', 'Meleagris gallopavo');
+insert into animals (id, displayname, scientificname) values (35, 'Ibis, puna', 'Plegadis ridgwayi');
+insert into animals (id, displayname, scientificname) values (36, 'Red hartebeest', 'Alcelaphus buselaphus caama');
+insert into animals (id, displayname, scientificname) values (37, 'Cormorant (unidentified)', 'unavailable');
+insert into animals (id, displayname, scientificname) values (38, 'Nuthatch, red-breasted', 'Sitta canadensis');
+insert into animals (id, displayname, scientificname) values (39, 'Seal, harbor', 'Phoca vitulina');
+insert into animals (id, displayname, scientificname) values (40, 'Green vine snake', 'Oxybelis fulgidus');
+insert into animals (id, displayname, scientificname) values (41, 'Golden jackal', 'Canis aureus');
+insert into animals (id, displayname, scientificname) values (42, 'Western grey kangaroo', 'Macropus fuliginosus');
+insert into animals (id, displayname, scientificname) values (43, 'Heron, goliath', 'Ardea golieth');
+insert into animals (id, displayname, scientificname) values (44, 'Bleu, red-cheeked cordon', 'Uraeginthus bengalus');
+insert into animals (id, displayname, scientificname) values (45, 'Indian red admiral', 'Vanessa indica');
+insert into animals (id, displayname, scientificname) values (46, 'Whale, long-finned pilot', 'Globicephala melas');
+insert into animals (id, displayname, scientificname) values (47, 'Golden brush-tailed possum', 'Trichosurus vulpecula');
+insert into animals (id, displayname, scientificname) values (48, 'Hawk-eagle, crowned', 'Spizaetus coronatus');
+insert into animals (id, displayname, scientificname) values (49, 'Skua, great', 'Catharacta skua');
+insert into animals (id, displayname, scientificname) values (50, 'Anaconda (unidentified)', 'Eunectes sp.');
