@@ -44,8 +44,8 @@ app.get('/api/user/list', function(req, res){
 })
 
 //go(lang)
-app.get('/api/country/list', function(req, res){
-  axios.get(ws_go+'/getcountrylist', { params: req.query })
+app.get('/api/movie/list', function(req, res){
+  axios.get(ws_go+'/getmovielist', { params: req.query })
     .then( response => {
       data = response.data
       res.send(data)

@@ -1,0 +1,401 @@
+[{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561a"
+  },
+  "id": 5,
+  "title": "Clap, You're Dead",
+  "genre": "(no genres listed)",
+  "year": "2010"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561b"
+  },
+  "id": 16,
+  "title": "Love of Siam, The (Rak haeng Siam)",
+  "genre": "Drama|Mystery|Romance",
+  "year": "2012"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561c"
+  },
+  "id": 2,
+  "title": "18 Again!",
+  "genre": "Comedy|Fantasy",
+  "year": "2009"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561d"
+  },
+  "id": 17,
+  "title": "Last Days in Vietnam",
+  "genre": "Documentary|War",
+  "year": "1999"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561e"
+  },
+  "id": 3,
+  "title": "Stacy",
+  "genre": "Comedy|Horror",
+  "year": "2001"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b561f"
+  },
+  "id": 1,
+  "title": "At the Earth's Core",
+  "genre": "Adventure|Sci-Fi",
+  "year": "2009"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5620"
+  },
+  "id": 20,
+  "title": "Abbott and Costello Meet the Invisible Man",
+  "genre": "Comedy|Sci-Fi",
+  "year": "2007"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5621"
+  },
+  "id": 22,
+  "title": "SherryBaby",
+  "genre": "Drama",
+  "year": "1994"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5622"
+  },
+  "id": 18,
+  "title": "Take the Money and Run",
+  "genre": "Comedy|Crime",
+  "year": "2010"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5623"
+  },
+  "id": 24,
+  "title": "Performance",
+  "genre": "Crime|Drama|Thriller",
+  "year": "2006"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5624"
+  },
+  "id": 26,
+  "title": "Son of No One, The",
+  "genre": "Action|Crime|Thriller",
+  "year": "2001"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5625"
+  },
+  "id": 19,
+  "title": "Children of Heaven, The (Bacheha-Ye Aseman)",
+  "genre": "Comedy|Drama",
+  "year": "1994"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5626"
+  },
+  "id": 23,
+  "title": "On Earth as It Is in Heaven (Así en el cielo como en la tierra)",
+  "genre": "Comedy",
+  "year": "1998"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5627"
+  },
+  "id": 25,
+  "title": "Fatal Attraction",
+  "genre": "Drama|Thriller",
+  "year": "1995"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5628"
+  },
+  "id": 21,
+  "title": "Love Is News",
+  "genre": "Comedy|Romance",
+  "year": "2008"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5629"
+  },
+  "id": 27,
+  "title": "7 Boxes (7 cajas)",
+  "genre": "Action|Thriller",
+  "year": "2006"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562a"
+  },
+  "id": 30,
+  "title": "Divine Madness!",
+  "genre": "Comedy",
+  "year": "2006"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562b"
+  },
+  "id": 28,
+  "title": "Scream of Stone (Cerro Torre: Schrei aus Stein)",
+  "genre": "Drama",
+  "year": "2012"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562c"
+  },
+  "id": 29,
+  "title": "Find Love",
+  "genre": "Romance",
+  "year": "1995"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562d"
+  },
+  "id": 32,
+  "title": "Bob the Butler",
+  "genre": "Comedy",
+  "year": "2001"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562e"
+  },
+  "id": 31,
+  "title": "Vampires Suck",
+  "genre": "Comedy",
+  "year": "1996"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b562f"
+  },
+  "id": 33,
+  "title": "Charlie Chan at Monte Carlo",
+  "genre": "Comedy|Crime|Mystery|Thriller",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5630"
+  },
+  "id": 7,
+  "title": "Dragonball Evolution",
+  "genre": "Action|Adventure|Fantasy|Sci-Fi",
+  "year": "2008"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5631"
+  },
+  "id": 4,
+  "title": "Fast Food",
+  "genre": "Comedy",
+  "year": "1987"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5632"
+  },
+  "id": 11,
+  "title": "Art of Dying, The (El Arte de Morir)",
+  "genre": "Horror|Mystery|Thriller",
+  "year": "2000"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5633"
+  },
+  "id": 9,
+  "title": "Wing Chun",
+  "genre": "Action|Comedy|Drama|Romance",
+  "year": "2005"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5634"
+  },
+  "id": 34,
+  "title": "Dead Space: Downfall",
+  "genre": "Action|Animation|Sci-Fi",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5635"
+  },
+  "id": 8,
+  "title": "God's Comedy (A Comédia de Deus)",
+  "genre": "Comedy|Drama",
+  "year": "2006"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5636"
+  },
+  "id": 36,
+  "title": "Dog Nail Clipper (Koirankynnenleikkaaja)",
+  "genre": "Drama",
+  "year": "1993"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5637"
+  },
+  "id": 35,
+  "title": "Rage in Placid Lake, The",
+  "genre": "Comedy",
+  "year": "1985"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5638"
+  },
+  "id": 6,
+  "title": "Wyoming Renegades",
+  "genre": "Romance|Western",
+  "year": "2012"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5639"
+  },
+  "id": 37,
+  "title": "Biloxi Blues",
+  "genre": "Comedy|Drama",
+  "year": "1990"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563a"
+  },
+  "id": 38,
+  "title": "It Could Happen to You",
+  "genre": "Comedy|Drama|Romance",
+  "year": "1988"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563b"
+  },
+  "id": 40,
+  "title": "The Man Who Lived Again",
+  "genre": "Horror|Sci-Fi",
+  "year": "1995"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563c"
+  },
+  "id": 42,
+  "title": "Bad News Bears in Breaking Training, The",
+  "genre": "Comedy",
+  "year": "2006"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563d"
+  },
+  "id": 39,
+  "title": "Preaching to the Perverted",
+  "genre": "Comedy|Drama",
+  "year": "2002"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563e"
+  },
+  "id": 43,
+  "title": "Urban Cowboy",
+  "genre": "Drama",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b563f"
+  },
+  "id": 41,
+  "title": "Spies Like Us",
+  "genre": "Comedy",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5640"
+  },
+  "id": 44,
+  "title": "Group, The",
+  "genre": "Drama",
+  "year": "1995"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5641"
+  },
+  "id": 46,
+  "title": "Quitting (Zuotian)",
+  "genre": "Drama",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5642"
+  },
+  "id": 48,
+  "title": "Philadelphia Experiment II",
+  "genre": "Action|Adventure|Sci-Fi",
+  "year": "1992"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5643"
+  },
+  "id": 47,
+  "title": "All's Well",
+  "genre": "Drama",
+  "year": "1992"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5644"
+  },
+  "id": 49,
+  "title": "Cashback",
+  "genre": "Comedy|Drama",
+  "year": "1987"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5645"
+  },
+  "id": 50,
+  "title": "Hunchback, The",
+  "genre": "Drama",
+  "year": "1997"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5646"
+  },
+  "id": 45,
+  "title": "Real McCoy, The",
+  "genre": "Action|Crime|Drama|Thriller",
+  "year": "1991"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5647"
+  },
+  "id": 13,
+  "title": "Tepenin Ardi",
+  "genre": "Drama|Thriller",
+  "year": "2002"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5648"
+  },
+  "id": 14,
+  "title": "HellBent",
+  "genre": "Horror|Thriller",
+  "year": "1996"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b5649"
+  },
+  "id": 12,
+  "title": "Cronos",
+  "genre": "Drama|Horror",
+  "year": "2000"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b564a"
+  },
+  "id": 15,
+  "title": "Paperman",
+  "genre": "Animation|Comedy|Romance",
+  "year": "2009"
+},{
+  "_id": {
+    "$oid": "61da6920ff638ae7512b564b"
+  },
+  "id": 10,
+  "title": "Jive Turkey",
+  "genre": "Action",
+  "year": "2012"
+}]
