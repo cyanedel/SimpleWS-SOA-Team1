@@ -1,11 +1,13 @@
 <script>
+  var listCache;
   $(function(){
     getMovieList();
   })
 
   function getMovieList(params){
     $.get("api/movie/list", params).done(response => {
-      populateTableList(response)
+      listCache = response
+      populateTableList(_.sortBy(listCache, ['Title']))
     })
   }
 
@@ -30,16 +32,33 @@
       $('.js-table-movie-list tbody').append($("<tr><td class='fst-italic text-center' colspan='5'>- no data -</td></tr>"))
     }
   }
+
+  function sortTableBy(key){
+    switch (key){
+      case 'uid':
+        populateTableList(_.sortBy(listCache, ['Id']))
+        break;
+      case 'title':
+        populateTableList(_.sortBy(listCache, ['Title']))
+        break;
+      case 'genre':
+        populateTableList(_.sortBy(listCache, ['Genre']))
+        break;
+      case 'year':
+        populateTableList(_.sortBy(listCache, ['Year']))
+        break;
+    }
+  }
 </script>
 <div class="container my-3">
   <div class="row"><div class="col"><h4>Movie List</h4></div></div>
   <table class="js-table-movie-list table table-striped">
     <thead>
     <tr class="table-dark">
-      <th>uid</th>
-      <th>Title</th>
-      <th>Genre</th>
-      <th>Release Year</th>
+      <th class="pointer" onclick="javascript:sortTableBy('uid')">uid</th>
+      <th class="pointer" onclick="javascript:sortTableBy('title')">Title</th>
+      <th class="pointer" onclick="javascript:sortTableBy('genre')">Genre</th>
+      <th class="pointer" onclick="javascript:sortTableBy('year')">Release Year</th>
     </tr>
   </thead>
   <tbody></tbody>
