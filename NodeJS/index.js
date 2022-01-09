@@ -8,6 +8,7 @@ const axios = require('axios');
 
 const ws_python = 'http://localhost:3200/';
 const ws_go = 'http://localhost:3300/';
+const ws_php = 'http://localhost:3400/soa-rest/';
 
 http.listen(port, function(){
 	console.log('===================');
@@ -46,6 +47,19 @@ app.get('/api/user/list', function(req, res){
 //go(lang)
 app.get('/api/movie/list', function(req, res){
   axios.get(ws_go+'/getmovielist', { params: req.query })
+    .then( response => {
+      data = response.data
+      res.send(data)
+    })
+    .catch(function (error) {
+      console.log(error);
+      res.send(error);
+    })
+})
+
+//php
+app.get('/api/php/list', function(req, res){
+  axios.get(ws_php+'/test', { params: req.query })
     .then( response => {
       data = response.data
       res.send(data)
